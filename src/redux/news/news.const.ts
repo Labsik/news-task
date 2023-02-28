@@ -1,1 +1,1 @@
- export const newsStoreKey = "news";
+export const newsStoreKey = "news";
