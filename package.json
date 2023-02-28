@@ -17,6 +17,7 @@
     "husky": "^8.0.3",
     "i18next": "^22.4.10",
     "lint-staged": "^13.1.2",
+    "notistack": "^2.0.8",
     "prettier": "^2.8.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -39,14 +40,14 @@
       "react-app/jest"
     ]
   },
-   "lint-staged": {
-     "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
-       "prettier --write"
-     ]
-   },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "prettier --write"
+    ]
+  },
   "husky": {
     "hooks": {
-       "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged"
     }
   },
   "browserslist": {
