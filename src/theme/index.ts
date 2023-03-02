@@ -89,7 +89,6 @@ export const muiTheme = createTheme({
         },
       },
     },
-
     MuiCssBaseline: {
       styleOverrides: {
         html: {
@@ -102,15 +101,12 @@ export const muiTheme = createTheme({
           MozOsxFontSmoothing: "grayscale",
           fontFamily: "'Nunito Sans', sans-serif",
           color: Colors.PRIMARY,
-          fontSize: "1.6rem",
+          fontSize: "1.2rem",
           fontWeight: 300,
+          overflowX: "hidden",
         },
         button: {
           fontFamily: "Nunito Sans, sans-serif",
-        },
-        a: {
-          textDecoration: "none",
-          color: Colors.PRIMARY,
         },
         "#root": {
           minWidth: "100vw",

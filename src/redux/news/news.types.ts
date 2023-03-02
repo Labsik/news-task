@@ -9,4 +9,6 @@ export interface INewsState {
   news: INews[];
   loading: boolean;
   error: null | Error;
+  limit: number;
+  maxNewsNumber: number;
 }

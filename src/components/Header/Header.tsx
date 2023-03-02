@@ -7,13 +7,17 @@ import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import MenuItem from "@mui/material/MenuItem";
-import { Links } from "./Links";
 import { AuthContext } from "../../context";
 import { useLogout } from "../../hooks";
+import { useTranslation } from "react-i18next";
+import { Links } from "./Links";
+import { ToggleLang } from "./ToggleLang";
 
 export const Header = () => {
   const { isAuth } = useContext(AuthContext);
   const { logout } = useLogout();
+
+  const { t } = useTranslation();
 
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
     null
@@ -60,27 +64,29 @@ export const Header = () => {
                 display: { xs: "block", md: "none" },
               }}
             >
-              <Links to="/" title="Main" />
-              <Links to="/news" title="News" />
-              <Links to="/profile" title="Profile" />
+              <Links to="/" title={t("Main")} />
+              <Links to="/news" title={t("News")} />
+              <Links to="/profile" title={t("Profile")} />
             </Menu>
           </Box>
 
           <Box
             sx={{ flexGrow: 1, gap: 2, display: { xs: "none", sm: "flex" } }}
           >
-            <Links to="/" title="Main" />
-            <Links to="/news" title="News" />
-            {isAuth ? <Links to="/profile" title="Profile" /> : null}
+            <Links to="/" title={t("Main")} />
+            <Links to="/news" title={t("News")} />
+            {isAuth ? <Links to="/profile" title={t("Profile")} /> : null}
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
             {isAuth ? (
-              <MenuItem onClick={logout}>Logout</MenuItem>
+              <MenuItem onClick={logout}>{t("Logout")}</MenuItem>
             ) : (
-              <Links to="/login" title="Login" />
+              <Links to="/login" title={t("Login")} />
             )}
           </Box>
+
+          <ToggleLang />
         </Toolbar>
       </Container>
     </AppBar>
