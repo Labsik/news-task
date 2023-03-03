@@ -1,7 +1,7 @@
 {
   "name": "news-task",
   "version": "0.1.0",
-  "homepage": "https://Labsik.github.io/news",
+  "homepage": "https://Labsik.github.io/news-task",
   "private": false,
   "dependencies": {
     "@emotion/react": "^11.10.6",
