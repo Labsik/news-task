@@ -4,7 +4,7 @@ import { INews, removeNews } from "../../redux/news";
 import { useSnackbar } from "notistack";
 import { useAppDispatch } from "../../redux/hooks";
 import { StyledBoxInfoNews, StyledBoxTitleNews, StyledCard } from "./styled";
-import { Colors } from "../../theme";
+import { Colors } from "../../theme/colors";
 
 interface NewsCardProps {
   n: INews

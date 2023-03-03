@@ -4,6 +4,7 @@ import MenuItem from "@mui/material/MenuItem";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
 import { useTranslation } from "react-i18next";
 import { lngs } from "../../helpers";
+import { Colors } from "../../theme/colors";
 
 export const ToggleLang = () => {
   const { i18n } = useTranslation();
@@ -21,7 +22,7 @@ export const ToggleLang = () => {
         onChange={handleLang}
         displayEmpty
         inputProps={{ "aria-label": "Without label", "data-testid": "lang" }}
-        sx={{ background: "white", border: "none" }}
+        sx={{ background: Colors.WHITE, border: "none" }}
       >
         {Object.keys(lngs).map((l) => (
           <MenuItem key={l} value={l}>

@@ -1,4 +1,5 @@
 import { styled } from "@mui/material";
+import { Colors } from "../../theme/colors";
 
 export const StyledForm = styled('form')(({ theme }) => ({
   display: 'flex',
@@ -17,8 +18,8 @@ export const StyledForm = styled('form')(({ theme }) => ({
 export const StyledInput = styled('input')({
   width: '100%',
   maxWidth: '600px',
-  color: 'black',
-  background: 'white',
+  color: Colors.BLACK,
+  background: Colors.WHITE,
   padding: '1rem 0',
   fontSize: '1rem',
   border: 'none',

@@ -1,6 +1,6 @@
 import React from "react";
 
-import { BrowserRouter } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 import { styled, CssBaseline } from "@mui/material";
 import { Provider } from "react-redux";
 import { store } from "./redux/store";
@@ -21,7 +21,7 @@ const AppWrap = styled("div")(({ theme }) => ({
 function App() {
   return (
     <AuthProvider>
-      <BrowserRouter>
+      <HashRouter>
         <Provider store={store}>
           <ThemeProvider theme={muiTheme}>
             <SnackbarProvider
@@ -37,7 +37,7 @@ function App() {
             </SnackbarProvider>
           </ThemeProvider>
         </Provider>
-      </BrowserRouter>
+      </HashRouter>
     </AuthProvider>
   );
 }

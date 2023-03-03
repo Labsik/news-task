@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/consistent-type-assertions */
 import { Components } from '@mui/material/styles/components';
 import { Theme } from '@mui/material';
+import { Colors } from './colors';
 
 export default <Components<Theme>>{
   MuiButtonBase: {
@@ -8,7 +9,7 @@ export default <Components<Theme>>{
       root: {
         height: "3.6rem",
         '&:hover': {
-          color: 'white',
+          color: Colors.WHITE,
         },
       },
     },
@@ -47,7 +48,7 @@ export default <Components<Theme>>{
         WebkitFontSmoothing: "antialiased",
         MozOsxFontSmoothing: "grayscale",
         fontFamily: "'Nunito Sans', sans-serif",
-        color: 'white',
+        color: Colors.WHITE,
         fontSize: "1.2rem",
         fontWeight: 300,
         overflowX: "hidden",
