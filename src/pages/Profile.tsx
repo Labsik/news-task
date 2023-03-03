@@ -1,5 +1,11 @@
 import React from "react";
+import { MainInfo } from "../components";
+import { StyledPageWrap } from "../styled";
 
 export const Profile = () => {
-  return <div>Profile</div>;
+  return (
+    <StyledPageWrap>
+      <MainInfo/>
+    </StyledPageWrap>
+  )
 };

@@ -1,6 +1,11 @@
 import React from "react";
 import { NewsList } from "../components";
+import { StyledPageWrap } from "../styled";
 
 export const News = () => {
-  return <NewsList />;
+  return (
+    <StyledPageWrap>
+      <NewsList />
+    </StyledPageWrap>
+  )
 };

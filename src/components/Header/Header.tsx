@@ -66,7 +66,7 @@ export const Header = () => {
             >
               <Links to="/" title={t("Main")} />
               <Links to="/news" title={t("News")} />
-              <Links to="/profile" title={t("Profile")} />
+              {isAuth ? <Links to="/profile" title={t("Profile")} /> : null}
             </Menu>
           </Box>
 

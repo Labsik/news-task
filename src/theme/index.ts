@@ -55,6 +55,9 @@ export const muiTheme = createTheme({
       styleOverrides: {
         root: {
           height: "3.6rem",
+          '&:hover': {
+            color: 'white',
+          },
         },
       },
     },
@@ -85,7 +88,7 @@ export const muiTheme = createTheme({
       styleOverrides: {
         root: {
           padding: "1rem 2.5rem",
-          "&.Mui-selected": { backgroundColor: "orange" },
+          "&.Mui-selected": { background: "linear-gradient(90deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%)" },
         },
       },
     },
@@ -100,7 +103,7 @@ export const muiTheme = createTheme({
           WebkitFontSmoothing: "antialiased",
           MozOsxFontSmoothing: "grayscale",
           fontFamily: "'Nunito Sans', sans-serif",
-          color: Colors.PRIMARY,
+          color: 'white',
           fontSize: "1.2rem",
           fontWeight: 300,
           overflowX: "hidden",
@@ -108,12 +111,17 @@ export const muiTheme = createTheme({
         button: {
           fontFamily: "Nunito Sans, sans-serif",
         },
+        a: {
+          textDecoration: 'none',
+        },
         "#root": {
           minWidth: "100vw",
           minHeight: "100vh",
+          background: 'linear-gradient(90deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%)'
         },
       },
     },
   },
+
   spacing: 8,
 });

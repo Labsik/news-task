@@ -7,7 +7,7 @@ import { lngs } from "../../helpers";
 
 export const ToggleLang = () => {
   const { i18n } = useTranslation();
-  const [lang, setLang] = useState("en");
+  const [lang, setLang] = useState(i18n.language);
 
   const handleLang = (event: SelectChangeEvent) => {
     setLang(event.target.value);
@@ -24,7 +24,7 @@ export const ToggleLang = () => {
         sx={{ background: "white", border: "none" }}
       >
         {Object.keys(lngs).map((l) => (
-          <MenuItem key={l} value={l} sx={{ gap: "20px" }}>
+          <MenuItem key={l} value={l}>
             {l}
           </MenuItem>
         ))}

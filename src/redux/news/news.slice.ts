@@ -7,7 +7,7 @@ const initialState: INewsState = {
   news: [],
   loading: false,
   error: null,
-  limit: 20,
+  limit: 21,
   maxNewsNumber: 100,
 };
 
