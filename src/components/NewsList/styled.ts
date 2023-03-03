@@ -8,7 +8,9 @@ export const StyledBox = styled(Box)({
 })
 
 export const StyledCard = styled(Card)({
-  width: '100%', maxHeight: '450px', height: '100%'
+  width: '100%',
+  maxHeight: '450px',
+  height: '100%'
 })
 
 export const StyledBoxTitleNews = styled(Box)(({ theme }) => ({

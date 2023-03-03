@@ -1,7 +1,6 @@
 import React from "react";
 
 import { BrowserRouter } from "react-router-dom";
-import "./App.css";
 import { styled, CssBaseline } from "@mui/material";
 import { Provider } from "react-redux";
 import { store } from "./redux/store";

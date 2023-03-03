@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { useLogin } from "../../hooks";
+import { StyledButton } from "../../styled";
+import { StyledForm, StyledInput } from "./styled";
 
 export const LoginForm = () => {
   const { login } = useLogin();
@@ -17,29 +19,29 @@ export const LoginForm = () => {
     setLoginData({ name: "", password: "" });
   };
 
-  const isDisabled = name === "" || password === "";
+  const isDisabled = name === "" || password === "" || name.trim() === '' || password.trim() === ''
 
   return (
     <>
-      <form onSubmit={submitLogin}>
-        <input
+      <StyledForm onSubmit={submitLogin}>
+        <StyledInput
           type="text"
           id="name"
           placeholder="name"
           value={name}
           onChange={(e) => handleInput(e)}
         />
-        <input
+        <StyledInput
           type="password"
           id="password"
           placeholder="password"
           value={password}
           onChange={(e) => handleInput(e)}
         />
-        <button type="submit" disabled={isDisabled}>
+        <StyledButton type="submit" disabled={isDisabled}>
           Login
-        </button>
-      </form>
+        </StyledButton>
+      </StyledForm>
     </>
   );
 };

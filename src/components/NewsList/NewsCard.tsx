@@ -4,11 +4,11 @@ import { INews, removeNews } from "../../redux/news";
 import { useSnackbar } from "notistack";
 import { useAppDispatch } from "../../redux/hooks";
 import { StyledBoxInfoNews, StyledBoxTitleNews, StyledCard } from "./styled";
+import { Colors } from "../../theme";
 
 interface NewsCardProps {
   n: INews
 }
-
 
 export const NewsCard = ({n}:NewsCardProps) => {
   const dispatch = useAppDispatch()
@@ -37,7 +37,7 @@ export const NewsCard = ({n}:NewsCardProps) => {
         </StyledBoxInfoNews>
 
       </CardContent>
-      <CardActions sx={{backgroundColor: 'darkgrey'}}>
+      <CardActions sx={{backgroundColor: Colors.DARKGRAY}}>
         <Button size="small" variant="outlined" onClick={() => onRemoveNews(n)}>Remove</Button>
       </CardActions>
     </StyledCard>
